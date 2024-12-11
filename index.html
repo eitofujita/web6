@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор стоимости заказа</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container calculator">
+        <h1>Калькулятор стоимости заказа</h1>
+
+        <div class="mb-3">
+            <label for="quantity" class="form-label">Количество товара</label>
+            <input type="number" class="form-control" id="quantity" placeholder="Введите количество">
+        </div>
+
+        <div class="mb-3">
+            <label for="productType" class="form-label">Выберите тип товара</label>
+            <select class="form-select" id="productType">
+                <option value="1">Смартфон (10000 рублей за единицу)</option>
+                <option value="2">Планшет (20000 рублей за единицу)</option>
+                <option value="3">Ноутбук(30000 рублей за единицу)</option>
+            </select>
+        </div>
+
+        <div class="mb-3" id="optionsContainer" style="display: none;">
+            <label for="productOption" class="form-label">Выберите опцию</label>
+            <select class="form-select" id="productOption">
+                <option value="500">Опция A (+500 рублей)</option>
+                <option value="1000">Опция B (+1000 рублей)</option>
+            </select>
+        </div>
+
+        <div class="mb-3" id="propertyContainer" style="display: none;">
+            <label>
+                <input type="checkbox" id="productProperty"> Дополнительная гарантия (+300 рублей)
+            </label>
+        </div>
+
+        <button id="calculateBtn" class="btn btn-primary w-100">Рассчитать общую стоимость</button>
+
+        <div class="result mt-4">
+            <h2>Общая стоимость: <span id="totalPrice">0</span> рублей</h2>
+        </div>
+    </div>
+    <script src="calulator.js" defer></script>
+</body>
+</html>
